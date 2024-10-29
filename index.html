@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>مشروع تخرج المجموعة أ</title>
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">المجموعة أ</a>
+    <nav class="navigation">
+        <a href="#الأعضاء">الأعضاء</a>
+        <a href="#التواصل">التواصل</a>
+    </nav>
+</header>
+
+<section class="main">
+    <div>
+        <h2>مرحبا في موقعنا</h2>
+        <h3>هذا مشروع تخرجنا</h3>
+        <a href="#الأعضاء" class="main-btn">اعرض فريقنا</a>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/RHIMCT.AlAjeilat"><i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+</section>
+
+<section class="projects" id="الأعضاء">
+    <h2 class="title">الأعضاء</h2>
+    <div class="content">
+        <div class="project-card" onclick="showPopup('م.د.خالد', 'أشرف على المشروع')">
+            <div class="project-image">
+                <img src="member1.jpg" alt="م.د.خالد" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">أشرف على المشروع</p>
+                <strong class="project-title">
+                    <span>م.د.خالد</span>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card" onclick="showPopup('إسلام الجدال', 'عمل على جزء من المشروع وعلى توليد الأفكار')">
+            <div class="project-image">
+                <img src="member2.jpg" alt="إسلام الجدال" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">عمل على جزء من المشروع وعلى توليد الأفكار</p>
+                <strong class="project-title">
+                    <span>إسلام الجدال</span>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card" onclick="showPopup('عبدالباري عامر', 'عمل على جزء من المشروع وعلى توليد الأفكار')">
+            <div class="project-image">
+                <img src="member3.jpg" alt="عبدالباري عامر" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">عمل على جزء من المشروع وعلى توليد الأفكار</p>
+                <strong class="project-title">
+                    <span>عبدالباري عامر</span>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card" onclick="showPopup('محمد بب', 'عمل على جزء من المشروع وعلى توليد الأفكار')">
+            <div class="project-image">
+                <img src="member4.jpg" alt="محمد بب" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">عمل على جزء من المشروع وعلى توليد الأفكار</p>
+                <strong class="project-title">
+                    <span>محمد بب</span>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card" onclick="showPopup('نعيمة', 'عملت على جزء من المشروع وعلى توليد الأفكار')">
+            <div class="project-image">
+                <img src="member5.jpg" alt="نعيمة" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">عملت على جزء من المشروع وعلى توليد الأفكار</p>
+                <strong class="project-title">
+                    <span>نعيمة</span>
+                </strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cards contact" id="التواصل">
+    <h2 class="title">تواصل مع المعهد</h2>
+    <div class="content">
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="info">
+                <h3>الهاتف</h3>
+                <p>091-2332844</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p class="footer-title"><span>المجموعة أ</span></p>
+    <div class="social-icon">
+        <a href="https://www.facebook.com/RHIMCT.AlAjeilat"><i class="fab fa-facebook"></i></a>
+    </div>
+</footer>
+
+<!-- نافذة منبثقة -->
+<div id="popup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-info"></p>
+    </div>
+</div>
+
+<script>
+    function showPopup(title, info) {
+        document.getElementById('popup-title').innerText = title;
+        document.getElementById('popup-info').innerText = info;
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+</body>
+</html>
